@@ -1,0 +1,27 @@
+.navbar{
+    background: white;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #363636 !important;
+    background-color: rgb(109, 108, 108) !important;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: rgb(199, 62, 62) !important;
+}
+
+#carouselExampleCaptions {
+ padding-left: 40px;
+ padding-right: 40px;
+}
+
+.imgtop{
+    margin-right: 60px;
+
+}
+
+.imgtop2{
+    margin-left: 262px;
+
+}
