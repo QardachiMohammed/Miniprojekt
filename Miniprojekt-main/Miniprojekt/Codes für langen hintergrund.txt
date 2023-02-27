@@ -1,0 +1,7 @@
+<div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="Bilder/Iphone14carossel.png" class="d-block w-100" alt="..." width="200px" height="400px">
+                <div class="carousel-caption d-none d-md-block">
+                  <h4>IPhone 14</h4>
+                  <p>Sehen sie sich das neuste Modell unserer IPhone Reihe an.</p>
+                </div>
