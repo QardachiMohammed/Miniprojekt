@@ -14,17 +14,118 @@
       </head>
 
       <script>
+		 "use strict";
+		 function fAuswahl () {
+			
+			var vAuswahl;
+      var vAuswahl2;
+			var vMenge ;
+      var vMenge2 ;
+			var vAusgabe;
+			var vPreis;
+      var vPreis2;
+			var vPreisA=8.99;
+			var vPreisB=9.99;
+			var vPreisC=10.99;
+      var vPreisD=13.99;
+      var vPreisE=12.99;
+      var vPreisF=11.99;
+			var vKosten;
+			 
+			var aktuellesDatum = new Date(); 
+		    var Tag = aktuellesDatum.getDate();
+	        var Monat = aktuellesDatum.getMonth() + 1;
+	        var Jahr = aktuellesDatum.getFullYear();
+	        var Day = aktuellesDatum.getDay();
+			
+			vAuswahl=document.getElementById("idAuswahl").value;
+      vAuswahl2=document.getElementById("idAuswahl2").value;
+			
+		    vMenge = document.getElementById("idMenge").value; 
+		    vMenge = parseFloat(vMenge)
 
-        function fZinseszinsrechner() {
-          
-        var vStart = 0;
-        var vEnde = "";
-        var vAusgabe = "";
-    
-        vAusgabe = vAusgabe + "Yes";
-    
-        document.getElementById("vAusgabe").innerHTML = vAusgabe;    
-    }
+        vMenge2 = document.getElementById("idMenge2").value; 
+		    vMenge2 = parseFloat(vMenge2)
+		 
+			if (vAuswahl=="Powerbank-Special") {
+			 
+				vPreis=vPreisA;	 
+			 }
+			 
+			else if (vAuswahl=="Powerbank-Eleganz") {
+			 
+				vPreis=vPreisB;
+			 }
+			 
+			else if	(vAuswahl=="Powerbank-Avantgarde") {
+			 
+				vPreis=vPreisC; 
+			 }
+       else if	(vAuswahl=="Powerbank-Avantgarde2") {
+			 
+       vPreis=vPreisD; 
+      }
+      else if	(vAuswahl=="Powerbank-Avantgarde3") {
+			 
+       vPreis=vPreisE; 
+      }
+      else if	(vAuswahl=="Powerbank-Avantgarde4") {
+			 
+       vPreis=vPreisF; 
+      }
+
+      if (vAuswahl2=="Powerbank-Special") {
+			 
+       vPreis2=vPreisA;	 
+      }
+      
+     else if (vAuswahl2=="Powerbank-Eleganz") {
+      
+       vPreis2=vPreisB;
+      }
+      
+     else if	(vAuswahl2=="Powerbank-Avantgarde") {
+      
+       vPreis2=vPreisC; 
+      }
+      else if	(vAuswahl2=="Powerbank-Avantgarde2") {
+      
+      vPreis2=vPreisD; 
+     }
+     else if	(vAuswahl2=="Powerbank-Avantgarde3") {
+      
+      vPreis2=vPreisE; 
+     }
+     else if	(vAuswahl2=="Powerbank-Avantgarde4") {
+      
+      vPreis2=vPreisF; 
+     }
+  
+			 vKosten= (vPreis * vMenge) + (vPreis2 * vMenge2);
+			 
+			 
+			 
+			 
+			 vAusgabe = "";
+
+			vAusgabe = vAusgabe + "Ausgewähltesprodukt: ";
+			vAusgabe = vAusgabe + vAuswahl + " und " + vAuswahl2 + "</br>" ;
+			vAusgabe = vAusgabe + "Der Stückpreis beträgt bei einer Menge von: " ;
+			vAusgabe = vAusgabe + vMenge; 
+			vAusgabe = vAusgabe + " " + vAuswahl + " ";
+			vAusgabe = vAusgabe + vPreis + "€" + " und " + "einer Menge von " + vMenge2 + " " + vAuswahl2 + " " + vPreis2 + "</br>"  ;
+			vAusgabe = vAusgabe + "Der Gesamtpreis inkl. MwSt. beträgt: "; 
+			vAusgabe = vAusgabe + vKosten.toFixed(2) + "€" + "</br>"; 
+			vAusgabe = vAusgabe + "</br>";
+		    vAusgabe = vAusgabe + "Der Kassenbon wurde am ";
+		    vAusgabe = vAusgabe + Tag;
+			vAusgabe = vAusgabe + ", den " + Tag + "." + Monat + "." + Jahr;
+		    vAusgabe = vAusgabe + " erstellt. Danke für Ihren Einkauf!";
+			 
+			document.getElementById("idAusgabe").innerHTML = vAusgabe ;
+			 
+			
+		 }
     </script>
 <body>
 
@@ -184,23 +285,23 @@
       <div class="imgtop3">
       <div class="row">
         <div class="col">
-          <div class="imgtop3">            <img src="Bilder/1.jpg" alt="" width="600px" height="400px" class="imgtop3"></div>    </div>
+          <div class="imgtop3">            <img src="Bilder/1.jpg" alt="" width="500px" height="350px" class="imgtop3"></div>    </div>
         <div class="col">
-          <div class="imgtop3">            <img src="Bilder/2.jpg" alt="" width="600px" height="400px" class="imgtop3"></div>    </div>
+          <div class="imgtop3">            <img src="Bilder/2.jpg" alt="" width="500px" height="350px" class="imgtop3"></div>    </div>
         <div class="col">
-          <div class="imgtop3">            <img src="Bilder/3.jpg" alt="" width="600px" height="400px" class="imgtop3"></div>    </div>
+          <div class="imgtop3">            <img src="Bilder/3.jpg" alt="" width="500px" height="350px" class="imgtop3"></div>    </div>
         </div>
         <p></p>
       </div>
       <div class="row">
         <div class="col">
-          <div class="imgtop3">            <img src="Bilder/4.jpg" alt="" width="600px" height="400px" class="imgtop3"></div>
+          <div class="imgtop3">            <img src="Bilder/4.jpg" alt="" width="500px" height="350px" class="imgtop3"></div>
         </div>
         <div class="col">
-          <div class="imgtop3">            <img src="Bilder/5.jpg" alt="" width="600px" height="400px" class="imgtop3"></div>
+          <div class="imgtop3">            <img src="Bilder/5.jpg" alt="" width="500px" height="350px" class="imgtop3"></div>
         </div>
         <div class="col">
-          <div class="imgtop3">            <img src="Bilder/6.jpg" alt="" width="600px" height="400px" class="imgtop3"></div>    </div>
+          <div class="imgtop3">            <img src="Bilder/6.jpg" alt="" width="500px" height="350px" class="imgtop3"></div>    </div>
         </div>
       </div>
     </div>
@@ -385,10 +486,36 @@
       </table></center>
       
   </div><!-- /colrow container-->
-  <button onclick="fZinseszinsrechner()">Berechnen</button> <br>
-  <div id="vAusgabe"></div>
   <hr>
+  <div align="center"><h1> Preisbestimmung des Warenkorbs </h1> </div>
+	<div align="center"> 
+	</div>
+	</br>
+	<div align="center">
+	Menge in Stück: <input id="idMenge" type="text" value="1"> Produktauswahl: <select id="idAuswahl"> 
+	<option> Powerbank-Special </option>
+	<option> Powerbank-Eleganz </option>
+	<option> Powerbank-Avantgarde</option>
+  <option> Powerbank-Avantgarde2</option>
+  <option> Powerbank-Avantgarde3</option>
+  <option> Powerbank-Avantgarde4</option>
+	</select>
 
+  Menge in Stück: <input id="idMenge2" type="text" value="1"> Produktauswahl: <select id="idAuswahl2"> 
+    <option> Powerbank-Special </option>
+    <option> Powerbank-Eleganz </option>
+    <option> Powerbank-Avantgarde</option>
+    <option> Powerbank-Avantgarde2</option>
+    <option> Powerbank-Avantgarde3</option>
+    <option> Powerbank-Avantgarde4</option>
+    </select>
+    <br /> <br />
+	<div align="center">
+	<button onClick="fAuswahl();">Berechne den Erlös</button> 
+	</div> <p> </p>
+	<div align="center">
+	<div id="idAusgabe"></div> <br>
+	</div>
   
 </body>
 
