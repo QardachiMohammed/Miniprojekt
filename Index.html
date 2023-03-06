@@ -1,0 +1,620 @@
+<html>
+    <head>
+
+        <title>Apple Fake</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+        <link rel="stylesheet" href="css/Maincss.css" >
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+      </head>
+
+      <script>
+		 "use strict";
+		 function fAuswahl () {
+
+			var vMenge ;
+      var vMenge2 ;
+      var vMenge3 ;
+      var vMenge4 ;
+      var vMenge5 ;
+      var vMenge6 ;
+      var vMenge7 ;
+      var vMenge8 ;
+			var vAusgabe;
+
+      var vProdukt1;
+			var vPreis1= 269;
+
+      var vProdukt2;
+			var vPreis2= 629;
+
+      var vProdukt3;
+			var vPreis3= 579;
+
+      var vProdukt4;
+			var vPreis4= 1059;
+
+      var vProdukt5;
+			var vPreis5= 1549;
+
+      var vProdukt6;
+			var vPreis6= 1599;
+
+      var vProdukt7;
+			var vPreis7= 169;
+
+      var vProdukt8;
+			var vPreis8= 349;
+
+			var vKosten;
+			 
+			var aktuellesDatum = new Date(); 
+		  var Tag = aktuellesDatum.getDate();
+	    var Monat = aktuellesDatum.getMonth() + 1;
+	    var Jahr = aktuellesDatum.getFullYear();
+	    var Day = aktuellesDatum.getDay();
+			
+		  vMenge = document.getElementById("idMenge").value; 
+		  vMenge = parseFloat(vMenge)
+			if (vMenge==0) {vProdukt1="";}
+      else {vProdukt1="AppleWatch , ";}
+        
+      vMenge2 = document.getElementById("idMenge2").value; 
+		  vMenge2 = parseFloat(vMenge2)
+			if (vMenge2==0) {vProdukt2="";}
+      else {vProdukt2="AirPods Max , ";}
+
+      vMenge3 = document.getElementById("idMenge3").value; 
+		  vMenge3 = parseFloat(vMenge3)
+			if (vMenge3==0) {vProdukt3="";}
+      else {vProdukt3="IPad , ";}
+
+      vMenge4 = document.getElementById("idMenge4").value; 
+		  vMenge4 = parseFloat(vMenge4)
+			if (vMenge4==0) {vProdukt4="";}
+      else {vProdukt4="IPhone 14 , ";}
+
+      vMenge5 = document.getElementById("idMenge5").value; 
+		  vMenge5 = parseFloat(vMenge5)
+			if (vMenge5==0) {vProdukt5="";}
+      else {vProdukt5="IMac , ";}
+
+      vMenge6 = document.getElementById("idMenge6").value; 
+		  vMenge6 = parseFloat(vMenge6)
+			if (vMenge6==0) {vProdukt6="";}
+      else {vProdukt6="Macbook , ";}
+
+      vMenge7 = document.getElementById("idMenge7").value; 
+		  vMenge7 = parseFloat(vMenge7)
+			if (vMenge7==0) {vProdukt7="";}
+      else {vProdukt7="Appletv , ";}
+
+      vMenge8 = document.getElementById("idMenge8").value; 
+		  vMenge8 = parseFloat(vMenge8)
+			if (vMenge8==0) {vProdukt8="";}
+      else {vProdukt8="Homepod";}
+       
+  
+			vKosten= (vMenge * vPreis1) + (vMenge2 * vPreis2) + (vMenge3 * vPreis3) + (vMenge4 * vPreis4) + (vMenge5 * vPreis5) + (vMenge6 * vPreis6) + (vMenge7 * vPreis7) + (vMenge8 * vPreis8);
+			 
+			vAusgabe = "";
+
+			vAusgabe = vAusgabe + "Ausgewählte Produkte: ";
+			vAusgabe = vAusgabe + vProdukt1 + vProdukt2 + vProdukt3 + vProdukt4 + vProdukt5 + vProdukt6 + vProdukt7 + vProdukt8 + "</br>" ;
+			vAusgabe = vAusgabe + "Der Gesamtpreis inkl. MwSt. beträgt: "; 
+			vAusgabe = vAusgabe + vKosten.toFixed(2) + "€" + "</br>"; 
+			vAusgabe = vAusgabe + "</br>";
+		  vAusgabe = vAusgabe + "Der Kassenbon wurde am ";
+		  vAusgabe = vAusgabe + Tag;
+			vAusgabe = vAusgabe + ", den " + Tag + "." + Monat + "." + Jahr;
+		  vAusgabe = vAusgabe + " erstellt. Danke für Ihren Einkauf!";
+			 
+			document.getElementById("idAusgabe").innerHTML = vAusgabe ;
+			 
+			
+		 }
+    </script>
+<body class="gbround">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><span class="bi bi-apple"></span>  Apple</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://apple.com" target="_blank">Original Website</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Partner
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="https://www.xing.com/profile/Khalid_Ebanhesaten">Ebanhesaten</a></li>
+              <li><a class="dropdown-item" href="https://www.leo-statz-berufskolleg.de/">Leo-Statz-Berufskolleg</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="https://de.wikipedia.org/wiki/Mohammed_VI._(Marokko)#:~:text=Leben-,Mohammed,mit%20seinem%20Vater%20Hassan%20II.">Mohammed Qardachi</a></li>
+            </ul>
+          <li class="nav-item">
+          <button class="btn bi bi-cart" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></button>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Suchen" aria-label="Suchen">
+          <button class="btn btn-outline-success" type="submit">Suchen</button>
+        </form>
+      </div>
+    </div>
+  </nav>  
+
+  <!-- Warenkorb-->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header" style="text-align: right;">
+      <h3 class="offcanvas-title" id="offcanvasRightLabel" >Warenkorb</h3>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+   </div>
+
+    <div class="offcanvas-body ">
+            <div class="Waren" style="padding-top: 5%; padding-bottom: 5%; margin-bottom: 15%;">
+              <div class="offcanvas-body">
+                <table>
+                  <tr>
+                    <th>
+                      <img src="Bilder/Applewatchcarossel.jpg" width="150px" height="100px">
+                    </th>
+                    <th>
+                      <img src="Bilder/Iphone14carossel.png" width="150px" height="100px">
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>Applewatch
+                      <br>
+                    <label>
+                      Größe
+                    <select name="Größe" size="1">
+                      <option>M</option>
+                      <option>L</option>
+                      <option>XL</option>
+                  </select>
+              </label>
+              </td>
+                  <td>IPhone 14
+                        <br>
+                      <label>
+                        Farbe
+                      <select name="Größe" size="1">
+                          <option>Schwarz</option>
+                          <option>Weiß</option>
+                          <option>Blau</option>
+                      </select>
+                  </label>
+                  </tr>
+                  <tr>
+                    <td>Preis: 269,00€
+                      <br></br>
+                      <p>
+                      <input type="checkbox" id="c1" name="cc" />
+                      <label for="c1"><span></span>Auswählen</label>
+                    </td>
+                    <td>Preis: 1059,00€
+                      <br></br>
+                      <p>
+                      <input type="checkbox" id="c1" name="cc" />
+                      <label for="c1"><span></span>Auswählen</label>
+                    </td>
+                  </tr>
+          
+                </table>
+              </div>
+            </div> 
+            </div style="background-color: black;">
+       
+               <h5> Zwischensumme: 0€</h5>
+
+           <div class="d-grid gap-2 ">
+            <a href="https://www.paypal.com/signin" target="_blank"> <button class="btn btn-outline-info border-3" type="button" style="color: black;">Direkt zu Paypal <i class="bi bi-paypal"></i></button> </a>
+             <button class="btn btn-info" type="button" style="color: black;">Weiter einkaufen!</button>
+           </div>
+     </div>
+   
+    
+       
+  <!-- Karussel -->
+        </div> <!-- col 1-1 -->
+        </div><!-- row 1 -->
+      </div><!-- container -->
+      <div class="row">
+        <div class="col noPrint">
+        <img src="Bilder/Applelogo.png" alt="" width="200" height="200" class="imgtop Responsive">
+        </div>
+        <div class="col-6">
+
+           
+          <div id="carouselExampleCaptions" class="carousel slide noPrint " >
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="Bilder/Iphone14carossel.png" class="d-block w-100 img-fluid" alt="..." width="200px" height="400px">
+                <div class="carousel-caption d-none d-md-block">
+                  <h4>IPhone 14</h4>
+                  <p>Sehen sie sich das neuste Modell unserer IPhone Reihe an.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="Bilder/Macbookcarossel.jpg" class="d-block w-100 img-fluid" alt="..." width="200px" height="400px">
+                <div class="carousel-caption d-none d-md-block">
+                  <h4>Macbook Pro</h4>
+                  <p>Die stärkste Leistung beim Arbeiten bringt ihnen dieses Produkt.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="Bilder/Applewatchcarossel.jpg" class="d-block w-100 img-fluid" alt="..." width="200px" height="400px">
+                <div class="carousel-caption d-none d-md-block">
+                  <h4>Applewatch</h4>
+                  <p>Immer ein Informierendes Gerät zur oder an der Hand.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div class="col noPrint">
+        <img src="Bilder/Applelogo2.png" alt="" width="200" height="200" class="imgtop2 Responsive">
+        </div> 
+      </div> <!-- row 2-->
+      <h2 style="text-align: center;">____________________________________________________________</h2>
+
+
+      <center> <h2>Neuigkeiten</h2> </center>      <div class="imgtop3">
+        <br>
+      <center><div class="row" style="width: 100rem;">
+        <div class="col card">
+          <div class="imgtop3"> <a href="https://www.apple.com/de/newsroom/2023/03/apple-accelerates-investment-in-germany-to-expand-silicon-design-center/" target="_blank" style="text-decoration: none; color: black;">            <img src="Bilder/news1.jpg.large.jpg" alt="" width="500px" height="350px" class="imgtop3 img-fluid"> </div> <h1> beschleunigt Investitionen in Deutschland mit zusätzlich einer Milliarde Euro für den Ausbau seines Europäischen Zentrums für Chip-Design</h1> </div></a>
+        <div class="col card" style="margin-left: 20px;">
+          <div class="imgtop3"> <a href="https://www.apple.com/de/newsroom/2023/02/with-apple-watch-researchers-explore-new-frontiers-in-heart-health/" target="_blank" style="text-decoration: none; color: black;">             <img src="Bilder/news2.jpg.large.jpg" alt="" width="500px" height="350px" class="imgtop3 img-fluid"></div> <h1>Mit der Apple Watch entdecken Forscher:innen neue Grenzen der Herzgesundheit</h1>   </div></a>
+        <div class="col card" style="margin-left: 20px;">
+          <div class="imgtop3"> <a href="https://www.apple.com/de/newsroom/2023/02/apple-spotlights-free-resources-to-protect-children-online/" target="_blank" style="text-decoration: none; color: black;">             <img src="Bilder/new3.jpg.large.jpg" alt="" width="500px" height="350px" class="imgtop3 img-fluid"></div> <h1>Apple stellt zum Safer Internet Day Features und Werkzeuge zum Schutz von Kindern im Internet vor</h1>   </div></a>
+        </div>
+        <p></p></center>
+        <br>
+      </div>
+      <center><div class="row" style="width: 100rem; padding-top: 0px;">
+        <div class="col card" >
+          <div class="imgtop3">  <a href="https://www.apple.com/de/newsroom/2023/01/apple-celebrates-black-history-month-with-unity-collection-and-exclusive-content/" target="_blank" style="text-decoration: none; color: black;">            <img src="Bilder/news4.jpg.large.jpg" alt="" width="500px" height="350px" class="imgtop3 img-fluid"> </div> <h1>Anlässlich des Black History Month veröffentlicht Apple eine neue Black Unity Collection und Inhalte</h1>   </div></a>
+        <div class="col card" style="margin-left: 20px;">
+          <div class="imgtop3" > <a href="https://www.apple.com/de/newsroom/2023/01/apple-introduces-the-new-homepod-with-breakthrough-sound-and-intelligence/" target="_blank" style="text-decoration: none; color: black;">            <img src="Bilder/news5.jpg.large.jpg" alt="" width="500px" height="350px" class="imgtop3 img-fluid"></div> <h1>Apple stellt neuen HomePod vor, wegweisend bei Sound und Intelligenz</h1>   </div></a>
+        <div class="col card" style="margin-left: 20px;">
+          <div class="imgtop3">  <a href="https://www.apple.com/de/newsroom/2023/01/apple-builds-on-privacy-commitment-by-unveiling-new-efforts-on-data-privacy-day/" target="_blank" style="text-decoration: none; color: black;">          <img src="Bilder/news6.jpg.large.jpg" alt="" width="500px" height="350px" class="imgtop3 img-fluid"></div> <h1>Apple unterstreicht sein Engagement für Privatsphäre und stellt am Datenschutztag neue Maßnahmen zur Wissensvermittlung und Sensibilisierung vor</h1>   </div></a>
+        </div>
+        <p></p></center>
+      </div>
+
+  <!-- Warenkorb + berechnung -->
+  <h2 style="text-align: center;">____________________________________________________________</h2>
+  <center> <h2 class="noPrint">Shop</h2> </center>
+  <p></p>
+  <center><table class="noPrint">
+        <tr>
+          <th>
+             <div class="card rounded-0 border text-bg-White" style="width: 16rem; padding-top: 0px; margin-right: 100px;">
+                <a href="https://www.apple.com/apple-watch-series-8/" target="_blank"><img src="Bilder/SApplewatch.jfif" class="card-img-top rounded-0" alt="..." width="300px" height="250"></a>
+                <div class="card-body">
+                  <h5 class="card-title" style="font-size: larger;">Apple Watch</h5>
+                  <p class="card-text" style="font-size: smaller;">Angebot endet am 31.März um 23:59. 
+                    <span style="font-size: large; background-color: rgb(0, 167, 8); font-weight: bold;">-25€</span><span style="font-size: large;"> | </span><span class="strikethrough" style="font-size: large;">25,00€</span><span style="font-size: large;"> | </span><span  style="font-size: large;"> <u>269,00€</u></span></p>
+                </div>
+              </div>
+          </th>
+          <th>
+            <div class="card rounded-0 border text-bg-White" style="width: 16rem; padding-top: 0px; margin-right: 50px;">
+              <a href="https://www.apple.com/airpods-max/" target="_blank"><img src="Bilder/SAipords.png" class="card-img-top rounded-0" alt="..." width="300px" height="250"></a>
+              <div class="card-body">
+                <h5 class="card-title" style="font-size: larger;">AirPods Max</h5>
+                <p class="card-text" style="font-size: smaller;">Angebot endet am 31.März um 23:59. 
+                  <span style="font-size: large; background-color: rgb(0, 167, 8); font-weight: bold;">-25€</span><span style="font-size: large;"> | </span><span class="strikethrough" style="font-size: large;">25,00€</span><span style="font-size: large;"> | </span><span  style="font-size: large;"> <u>629,00€</u></span></p>
+              </div>
+            </div>
+          </th>
+          <th>
+            <div class="card rounded-0 border text-bg-White" style="width: 16rem; padding-top: 0px; margin-left: 50px;">
+              <a href="https://www.apple.com/ipad-select/" target="_blank"><img src="Bilder/SIpad.png" class="card-img-top rounded-0" alt="..." width="500px" height="250"></a>
+              <div class="card-body">
+                <h5 class="card-title" style="font-size: larger;">IPad</h5>
+                <p class="card-text" style="font-size: smaller;">Angebot endet am 31.März um 23:59. 
+                  <span style="font-size: large; background-color: rgb(0, 167, 8); font-weight: bold;">-25€</span><span style="font-size: large;"> | </span><span class="strikethrough" style="font-size: large;">25,00€</span><span style="font-size: large;"> | </span><span  style="font-size: large;"> <u>579,00€</u></span></p>
+              </div>
+            </div>
+          </th>
+          <th>
+            <div class="card rounded-0 border text-bg-White" style="width: 16rem; padding-top: 0px; margin-left: 100px;">
+              <a href="https://www.apple.com/iphone-14-pro/" target="_blank"><img src="Bilder/SAIphone.webp" class="card-img-top rounded-0" alt="..." width="300px" height="250"></a>
+              <div class="card-body">
+                <h5 class="card-title" style="font-size: larger;">IPhone 14</h5>
+                <p class="card-text" style="font-size: smaller;">Angebot endet am 31.März um 23:59. 
+                  <span style="font-size: large; background-color: rgb(0, 167, 8); font-weight: bold;">-25€</span><span style="font-size: large;"> | </span><span class="strikethrough" style="font-size: large;">25,00€</span><span style="font-size: large;"> | </span><span  style="font-size: large;"> <u>1059,00€</u></span></p>
+              </div>
+            </div>
+          </th>
+          <tr>
+            <td>
+      
+            <label style="margin-right: 100px;">
+              Geschenk?
+              <select name="Geschenk" size="1">
+                <option>Nein</option>
+                <option>Ja</option>
+            </select>
+          </label>
+          </td>
+          <td>
+      
+              <label style="margin-right: 50px;">
+                Geschenk?
+                <select name="Geschenk" size="1">
+                  <option>Nein</option>
+                  <option>Ja</option>
+              </select>
+          </label>
+          </td>
+          <td>
+      
+              <label style="margin-left: 50px;">
+                Geschenk?
+                <select name="Geschenk" size="1">
+                  <option>Nein</option>
+                  <option>Ja</option>
+              </select>
+          </label>
+          </td>
+          <td>
+      
+              <label style="margin-left: 100px;">
+                Geschenk?
+                <select name="Geschenk" size="1">
+                  <option>Nein</option>
+                  <option>Ja</option>
+              </select>
+          </label>
+          </td>
+          
+          </tr>
+        <tr>
+          <td>
+            <p style="margin-right: 100px;">
+            Menge: <input id="idMenge" type="text" value="0" size="1" style="height:20px;">
+            <label for="c1"><span></span>Auswählen</label>
+          </td>
+          <td>
+            <p style="margin-right: 50px;">
+            Menge: <input id="idMenge2" type="text" value="0" size="1" style="height:20px;">
+            <label for="c1"><span></span>Auswählen</label>
+          </td>
+          <td>
+            <p style="margin-left: 50px;">
+            Menge: <input id="idMenge3" type="text" value="0" size="1" style="height:20px;">
+            <label for="c1"><span></span>Auswählen</label>
+          </td>
+          <td>
+            <p style="margin-left: 100px;">
+            Menge: <input id="idMenge4" type="text" value="0" size="1" style="height:20px;">
+            <label for="c1"><span></span>Auswählen</label>
+          </td>
+        </tr>
+      <th>
+        <div class="card rounded-0 border text-bg-White" style="width: 16rem; padding-top: 0px; margin-right: 50px;">
+          <a href="https://www.apple.com/de/shop/buy-mac/imac" target="_blank"><img src="Bilder/SImac.jfif" class="card-img-top rounded-0" alt="..." width="300px" height="250" ></a>
+          <div class="card-body">
+            <h5 class="card-title" style="font-size: larger;">IMac</h5>
+            <p class="card-text" style="font-size: smaller;">Angebot endet am 31.März um 23:59. 
+              <span style="font-size: large; background-color: rgb(0, 167, 8); font-weight: bold;">-25€</span><span style="font-size: large;"> | </span><span class="strikethrough" style="font-size: large;">25,00€</span><span style="font-size: large;"> | </span><span  style="font-size: large;"> <u>1549,00€</u></span></p>
+          </div>
+        </div>
+      </th>
+      <th>
+        <div class="card rounded-0 border text-bg-White" style="width: 16rem; padding-top: 0px; margin-right: 50px;">
+          <a href="https://www.apple.com/de/macbook-pro/" target="_blank"><img src="Bilder/SMacbook.jfif" class="card-img-top rounded-0" alt="..." width="300px" height="250"></a>
+          <div class="card-body">
+            <h5 class="card-title" style="font-size: larger;">Macbook</h5>
+            <p class="card-text" style="font-size: smaller;">Angebot endet am 31.März um 23:59. 
+              <span style="font-size: large; background-color: rgb(0, 167, 8); font-weight: bold;">-25€</span><span style="font-size: large;"> | </span><span class="strikethrough" style="font-size: large;">25,00€</span><span style="font-size: large;"> | </span><span  style="font-size: large;"> <u>1599,00€</u></span></p>
+          </div>
+        </div>
+      </th>
+      <th>
+        <div class="card rounded-0 border text-bg-White" style="width: 16rem; padding-top: 0px; margin-left: 50px;">
+          <a href="https://www.apple.com/de/shop/buy-tv/apple-tv-4k" target="_blank"><img src="Bilder/SAppletv.jfif" class="card-img-top rounded-0" alt="..." width="300px" height="250"></a>
+          <div class="card-body">
+            <h5 class="card-title" style="font-size: larger;">Appletv</h5>
+            <p class="card-text" style="font-size: smaller;">Angebot endet am 31.März um 23:59. 
+              <span style="font-size: large; background-color: rgb(0, 167, 8); font-weight: bold;">-25€</span><span style="font-size: large;"> | </span><span class="strikethrough" style="font-size: large;">25,00€</span><span style="font-size: large;"> | </span><span  style="font-size: large;"> <u>169,00€</u></span></p>
+          </div>
+        </div>
+      </th>
+      <th>
+        <div class="card rounded-0 border text-bg-White" style="width: 16rem; padding-top: 0px; margin-left: 100px;">
+          <a href="https://www.apple.com/de/shop/buy-homepod/homepod" target="_blank"><img src="Bilder/SHomepod.png" class="card-img-top rounded-0" alt="..." width="300px" height="250"></a>
+          <div class="card-body">
+            <h5 class="card-title" style="font-size: larger;">Homepod</h5>
+            <p class="card-text" style="font-size: smaller;">Angebot endet am 31.März um 23:59. 
+              <span style="font-size: large; background-color: rgb(0, 167, 8); font-weight: bold;">-25€</span><span style="font-size: large;"> | </span><span class="strikethrough" style="font-size: large;">25,00€</span><span style="font-size: large;"> | </span><span  style="font-size: large;"> <u>349,00€</u></span></p>
+          </div>
+        </div>
+      </th>
+    </tr>
+    <tr>
+      <td>
+
+      <label style="margin-right: 100px;">
+        Geschenk?
+        <select name="Geschenk" size="1">
+          <option>Nein</option>
+          <option>Ja</option>
+      </select>
+    </label>
+    </td>
+    <td>
+
+        <label style="margin-right: 50px;">
+          Geschenk?
+          <select name="Geschenk" size="1">
+            <option>Nein</option>
+            <option>Ja</option>
+        </select>
+    </label>
+    </td>
+    <td>
+
+        <label style="margin-left: 50px;">
+          Geschenk?
+          <select name="Geschenk" size="1">
+            <option>Nein</option>
+            <option>Ja</option>
+        </select>
+    </label>
+    </td>
+    <td>
+
+        <label style="margin-left: 100px;">
+          Geschenk?
+          <select name="Geschenk" size="1">
+            <option>Nein</option>
+            <option>Ja</option>
+        </select>
+    </label>
+    </td>
+    
+    </tr>
+    <tr >
+      <td>
+        <p style="margin-right: 100px;">
+        Menge: <input id="idMenge5" type="text" value="0" size="1" style="height:20px;">
+        <label for="c1"><span></span>Auswählen</label>
+      </td>
+      <td>
+        <p style="margin-right: 50px;">
+        Menge: <input id="idMenge6" type="text" value="0" size="1" style="height:20px;">
+        <label for="c1"><span></span>Auswählen</label>
+      </td>
+      <td>
+        <p style="margin-left: 50px;">
+        Menge: <input id="idMenge7" type="text" value="0" size="1" style="height:20px;">
+        <label for="c1"><span></span>Auswählen</label>
+      </td>
+      <td>
+        <p style="margin-left: 100px;">
+        Menge: <input id="idMenge8" type="text" value="0" size="1" style="height:20px;">
+        <label for="c1"><span></span>Auswählen</label>
+      </td>
+    </tr>
+  </table></center>
+  </div>
+  <div align="center" class="noPrint"><h1> Warenkorb Preis: </h1> </div>
+	<div align="center" class="noPrint">
+	<button onClick="fAuswahl();">Berechne den Preis</button> 
+	</div class="noPrint"> <p> </p>
+	<div align="center" class="noPrint">
+	<div id="idAusgabe">Hier wird ihr Preis ausgegeben!</div> <br>
+	</div class="noPrint">
+  <h2 style="text-align: center;" class="noPrint">____________________________________________________________</h2>
+  <br>
+
+  <!-- Erreichbarkeit -->
+    <div id="Filiale" class="container-fluid">
+    <div class="row">
+    <div class="col-12">
+    <center><h2>Unsere Öffnungszeiten</h2></center>
+    </div>
+    <center><table>
+    <tr>
+    <th>
+    <p><h4>Montag bis Freitag</h4> </p>
+    <p><h4>Samstag bis Sonntag </h4> </p>
+    </th>
+    <th>
+    <p><h4>   | 9:00 - 20:00 Uhr </h4> </p>
+    <p><h4>	  | 9:00 - 16:00 Uhr </h4> </p>
+    </th>
+    </tr>
+    </table>
+    <h2 style="text-decoration: underline;">So erreichen Sie uns:</h2>
+    <br>
+    </div>
+    <div class="container text-center">
+      <div class="row row-cols-3">
+        <div class="col borderbeste card"> <h4>Niederlassung Düsseldorf </h4> <img src="Bilder/Applestandort 1.png" class="img-fluid" alt="Niederlassung Köln" width="500px" height="350px"></div>
+        <div class="col "></div>
+        <div class="col borderbeste card"> <h4>Niederlassung Köln </h4> <img src="Bilder/Apple Standort 2.png" class="img-fluid" alt="Niederlassung Düsseldorf" width="500px" height="350px"></div>
+      </div>
+    </div>
+
+  <!-- Team Vorstellung -->
+<div id="Team" class="container-fluid text-center bg-grey">
+  <h2 style="text-align: center;">____________________________________________________________</h2>
+  <h2>Unser Team</h2><br>
+  <div class="row text-center">
+    <div class="col-sm-4 Personal Personal:hover">
+      <div class="thumbnail">
+        <img src="Bilder/Team1.png" alt="New York" width="350" height="250">
+        <p><strong>Tim Cook</strong></p>
+        <p>Chief Executive Officer</p>
+      </div>
+    </div>
+    <div class="col-sm-4 Personal Personal:hover">
+      <div class="thumbnail">
+        <img src="Bilder/Team 2.png" alt="New York" width="350" height="250">
+        <p><strong>Katherine Adams</strong></p>
+        <p>Senior Vice President and
+          General Counsel</p>
+      </div>
+    </div>
+    <div class="col-sm-4 Personal Personal:hover">
+      <div class="thumbnail">
+        <img src="Bilder/Team3.png" alt="San Francisco" width="350" height="250">
+        <p><strong> Eddy Cue</strong></p>
+        <p>Senior Vice President
+          Services</p>
+      </div>
+    </div>
+</div>
+      
+  </div>
+
+    <!-- Fußzeile -->
+  <div class="container">
+    <footer class="py-3 my-4" >
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3" >
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+      </ul>
+      <p class="text-center text-muted">&copy; 2023 APPLE Düsseldorf, Inc</p>
+    </footer>
+  </div>
+  
+</body>
+
+</html>
